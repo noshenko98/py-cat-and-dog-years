@@ -36,3 +36,11 @@ def test_incorrect_type_age(cat_age: int,
                             expected: BaseException) -> None:
     with pytest.raises(expected):
         get_human_age(cat_age, dog_age)
+
+
+def test_when_dog_age_is_negative() -> None:
+    assert get_human_age(15, -15) == [1, 0]
+
+
+def test_when_cat_age_is_negaive() -> None:
+    assert get_human_age(-15, 15) == [0, 1]

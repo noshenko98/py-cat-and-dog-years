@@ -14,11 +14,10 @@ def get_human_age(cat_age: int, dog_age: int) -> list:
         get_human_age(15, 15) == [1, 1]
         get_human_age(24, 24) == [2, 2]
     """
-    # TODO: Implement this function
     cat_human_age = sum([1 if cat_age >= 15 else 0,
-                         1 if cat_age - 15 >= 9 else 0,
+                         1 if cat_age >= 24 else 0,
                          ((cat_age - 15) - 9) // 4 if cat_age > 24 else 0])
     dog_human_age = sum([1 if dog_age >= 15 else 0,
-                         1 if dog_age - 15 >= 9 else 0,
+                         1 if dog_age >= 24 else 0,
                          ((dog_age - 15) - 9) // 5 if dog_age > 24 else 0])
     return [cat_human_age, dog_human_age]
